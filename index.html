@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Bangun Datar dan Ruang</title>
+  <script type="module" src="main.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔺 Kalkulator Bangun Datar & Ruang 🔺</h1>
+
+    <!-- Main Menu -->
+    <div id="mainMenu" class="main-menu">
+      <div class="menu-card" onclick="showShapes('datar')">
+        <h3>📐 Bangun Datar</h3>
+        <p>Hitung luas dan keliling bangun datar seperti persegi, lingkaran, segitiga, dll.</p>
+      </div>
+      <div class="menu-card" onclick="showShapes('ruang')">
+        <h3>📦 Bangun Ruang</h3>
+        <p>Hitung volume dan luas permukaan bangun ruang seperti kubus, tabung, kerucut, dll.</p>
+      </div>
+    </div>
+
+    <!-- Shape Selection -->
+    <div id="shapeSelection" class="hidden">
+      <button class="back-btn" onclick="showMainMenu()">← Kembali ke Menu Utama</button>
+      <h2 id="shapeTitle" style="text-align: center; margin-bottom: 20px; color: #FFD700;"></h2>
+      <div id="shapeGrid" class="shape-grid"></div>
+    </div>
+
+    <!-- Calculation Section -->
+    <div id="calculationSection" class="hidden">
+      <button class="back-btn" onclick="showShapes(currentType)">← Kembali ke Pilihan Bangun</button>
+      <div class="calculation-section">
+        <h3 id="calcTitle" style="color: #FFD700; text-align: center; margin-bottom: 20px;"></h3>
+
+        <div class="calc-options" id="calcOptions"></div>
+        <div class="formula-display" id="formulaDisplay"></div>
+        <div id="inputFields"></div>
+        <button class="calculate-btn" onclick="calculate()" id="calculateBtn">Hitung</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
